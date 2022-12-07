@@ -53,7 +53,7 @@ while (menu != '99'):
     elif (menu == '3'):
         ec2 = boto3.client('ec2')
 
-        instanceid = input("Enter instance id: ")
+        instance_id = input("Enter instance id: ")
 
         try:
             ec2.start_instances(
@@ -77,7 +77,7 @@ while (menu != '99'):
     elif (menu == '5'):
         ec2 = boto3.client('ec2')
 
-        instanceid = input("Enter instance id: ")
+        instance_id = input("Enter instance id: ")
 
         try:
             ec2.stop_instances(
@@ -106,7 +106,7 @@ while (menu != '99'):
         except:
             print("Exception")
         else:
-            print("Successfully create instance {}".format(instance_id))
+            print("Successfully create instance {}".format(ami_id))
 
     # 7. reboot instance
     elif (menu == '7'):
